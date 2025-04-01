@@ -68,7 +68,7 @@ section{
     background-size: cover;
     background-position: center;
     align-items: center;
-    padding: 70px 10% 0;
+    padding: 7rem 10% 0;
 }
 
 
@@ -79,13 +79,14 @@ section{
     background: transparent;
     border: none;
     filter: drop-shadow(0 0 3rem rgb(255, 196, 0)); 
+    animation: left 1s ease forwards;
  }
 
 .photo img:hover{
     filter: drop-shadow(0 0 5rem rgb(255, 196, 0)); 
 }
 .home_content{
-    max-width: 600px;
+    max-width: 60rem;
 }
 .home_content h1{
     color: rgb(255, 196, 0);

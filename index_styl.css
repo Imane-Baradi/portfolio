@@ -1,207 +1,636 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="index_styl.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+html{
+    font-size: 62%;
+    overflow-x: hidden;
+}
+body{
+    color: white;
+}
 
-</head>
-<body>
+.head{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 2rem 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: url(background.jpeg);
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    background:url(background.jpeg) no-repeat ;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+}
+.logo{
+    position: relative;
+    color: aliceblue;
+    font-size: 3rem;
+    text-decoration: none;
+    font-weight: 800;
+    animation:slideInRight 1s ease forwards;
+    cursor: default;
+    opacity: 0;
+}
+.slogo{
+    color: rgb(255, 196, 0);
+}
+.bar a{
+    display: inline-block;
+    font-size: 2.3rem;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 8rem;
+    transition: .3s;
+    animation:slideInUp .7s ease forwards;
 
-    <header class="head">
-        <a href="#" class="logo"><span class="slogo">P</span>ort<span class="slogo">f</span>olio</a>
-        <nav class="bar">
-            <a href="#home" style="--i:1">Home</a><!--class="active"-->
-            <a href="#about" style="--i:2">About</a>
-            <a href="#skills" style="--i:3">Skills</a>
-            <a href="#Contact" style="--i:4">Contact</a>
-        </nav>
-    </header>
-    <section class="home" id="home">
-        <div class="home_content">
-            <h3 class="animate-on-scroll">Hello,It's Me</h3>
-            <h1 class="animate-on-scroll"><span class="name">Baradi Imane</span></h1>
-            <h3 class="animate-on-scroll">And I'm a Full-stack developper</h3>
-            <p class="animate-on-scroll">Currently in my third year at the National School of Applied Sciences in Agadir, I'm specializing in Software and Application Development. I'm passionate about creating efficient, user-friendly digital experiences, and I'm always eager to learn and grow as a full-stack developer.
-        </p>
-            <div class="home-souscnt">
-                <a href="https://web.facebook.com/imi.baradi/" target="_blank" style="--i:5"><i class='bx bxl-facebook-circle' class="animate-on-scroll"></i></a>
-                <a href="https://www.instagram.com/imane_baradi/" target="_blank" style="--i:6"><i class='bx bxl-instagram-alt' class="animate-on-scroll" ></i></a>
-                <a href="https://www.linkedin.com/in/imane-baradi-897784335/" target="_blank" style="--i:8"><i class='bx bxl-linkedin-square' class="animate-on-scroll"></i></a>
-                <a href="mailto:imaneb772@gmail.com" style="--i:9"><i class='bx bxl-gmail' class="animate-on-scroll"></i></a>
-            </div>
-            <a href="BARADI (1).pdf" download class="button" target="_blank" class="animate-on-scroll">Download CV</a>
-        </div>
-        <div class="photo">
-            <img src="img_icon.jpg" alt="" class="animate-on-scroll">
-        </div>
-        
-    </section>
-    <section class="about" id="about">
-        
-            <div class="about_img" class="animate-on-scroll">
-                <img src="img.jpg" alt="" >
-            </div>
+}
+.bar a:hover,.bar a.active{
+    color: rgb(255, 196, 0);
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    background:url(background.jpeg) no-repeat ;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    padding: 7rem 10% 0;
+}
+
+
+.photo img{
+    width: 30vw;
+    border: solid;
+    border-radius: 50%;
+    background: transparent;
+    border: none;
+    filter: drop-shadow(0 0 3rem rgb(255, 196, 0)); 
+    animation: slideInLeft 1s ease forwards;
+ }
+
+.photo img:hover{
+    filter: drop-shadow(0 0 5rem rgb(255, 196, 0)); 
+}
+.home_content{
+    max-width: 60rem;
+}
+.home_content h1{
+    color: rgb(255, 196, 0);
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    animation: slideInRight 1s ease forwards;
+}
+
+.home_content h3{
+    font-size: 3.5rem;
+    font-weight: 700;
+    animation: slideInDown .7s ease forwards;
+}
+.home_content h3:nth-of-type(2){
+    margin-bottom: 3rem;
+    animation: slideInDown .7s ease forwards;
+    animation-delay: 1s;
+}
+/*.home_content p{
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin: 1.5rem 0;
+    animation: left 1s ease forwards;
+}*/
+.home_content p {
+    font-size: clamp(1.2rem, 1.5vw, 1.8rem); /* Taille responsive */
+    font-weight: 300; /* Plus lisible que 200 */
+    line-height: 1.6; /* Meilleure lisibilité */
+    margin: 2rem 0;
+    color: rgba(255, 255, 255, 0.9); /* Couleur plus douce (à adapter) */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle depth */
+    font-family: 'Inter', sans-serif; /* Police moderne */
+    animation: slideInRight 1s ease forwards;
     
-            <div class="about_cont">
-                <h2 class="title" class="animate-on-scroll">About <span class="me">Me</span></h2>
-                <p class="animate-on-scroll">
-                    I am a passionate first-year Software and Application Development Engineering student at the National School of Applied Sciences (ENSA) in Agadir. With a strong foundation in programming, algorithms, and system design, I am eager to explore the dynamic world of software engineering. My curiosity drives me to continuously learn new technologies, while my problem-solving mindset pushes me to tackle challenges creatively.  
-                </p>
-                
-                <p class="hidden-content" style="display: none;" class="animate-on-scroll">
-                    Third-year Software Engineering student specializing in application development with proven skills in Java, Python, and web technologies. Developed multiple academic projects including interactive websites and CLI applications, utilizing modern tools like Git and Docker. Trilingual problem-solver with a scientific mindset (Baccalaureate with Highest Honors) and passion for tech innovation. Currently enhancing my expertise in React and system design while actively participating in hackathons to sharpen my real-world development skills.
-                </p>
-                <div>
-                    <button class="button2 read-more-btn" class="animate-on-scroll">Read more</button>
-                </div>
-            </div>
-        
-    </section>
-    <section class="skills " id="skills">
-        <div class="skill_title">
-            <h2 class="animate-on-scroll">My skills</h2>
-        </div>
-        <div class="skills_container">
-            <div class="skills_left">
-                <h3 class="animate-on-scroll">Technical Skills</h3>
-                <div class="skill_bar" >
-                    <div class="info">
-                        <p>HTML</p>
-                        <p>80%</p>
-                    </div>
-                    <div class="bar">
-                        <span class="html"></span>
-                    </div>
-                </div>
-                <div class="skill_bar">
-                    <div class="info">
-                        <p>CSS</p>
-                        <p>70%</p>
-                    </div>
-                    <div class="bar">
-                        <span class="css"></span>
-                    </div>
-                </div>
-                <div class="skill_bar">
-                    <div class="info">
-                        <p>JavaScript</p>
-                        <p>50%</p>
-                    </div>
-                    <div class="bar">
-                        <span class="javascript"></span>
-                    </div>
-                </div>
-                <div class="skill_bar">
-                    <div class="info">
-                        <p>Python</p>
-                        <p>60%</p>
-                    </div>
-                    <div class="bar">
-                        <span class="python"></span>
-                    </div>
-                </div>
-                <div class="skill_bar">
-                    <div class="skill_bar">
-                        <div class="info">
-                            <p>JAVA</p>
-                            <p>40%</p>
-                        </div>
-                        <div class="bar">
-                            <span class="java"></span>
-                        </div>
-                    </div>
-                    <div class="skill_bar">
-                        <div class="info">
-                            <p>C</p>
-                            <p>70%</p>
-                        </div>
-                        <div class="bar">
-                            <span class="c"></span>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <p>C++</p>
-                        <p>40%</p>
-                    </div>
-                    <div class="bar">
-                        <span class="cp"></span>
-                    </div>
-                </div>
-                <div class="skill_bar">
-                    <div class="info">
-                        <p>SQL</p>
-                        <p>60%</p>
-                    </div>
-                    <div class="bar">
-                        <span class="sql"></span>
-                    </div>         
-               </div>
-               
-            </div>
-            <div class="skills_right">
-                <h3 class="animate-on-scroll">Professional Skills</h3>
-                <div class="radial_bars">
-                    <div class="radial_bar" >
-                        <svg viewBox="0 0 200 200">
-                            <circle class="path" cx="100" cy="100" r="80" ></circle>
-                            <circle class="progress_bar" cx="100" cy="100" r="80" style="--offset: 50"></circle>
-                        </svg>
-                        <div class="porcentage">90%</div>
-                        <div class="text">Creativity</div>
-                    </div>
-                    <div class="radial_bar">
-                        <svg viewBox="0 0 200 200">
-                            <circle class="path" cx="100" cy="100" r="80"></circle>
-                            <circle class="progress_bar" cx="100" cy="100" r="80" style="--offset: 200"></circle>
-                        </svg>
-                        <div class="porcentage">60%</div>
-                        <div class="text">Communication</div>
-                    </div>
-                    <div class="radial_bar">
-                        <svg viewBox="0 0 200 200">
-                            <circle class="path" cx="100" cy="100" r="80"></circle>
-                            <circle class="progress_bar" cx="100" cy="100" r="80" style="--offset: 125"></circle>
-                        </svg>
-                        <div class="porcentage">75%</div>
-                        <div class="text">Problem Solving</div>
-                    </div>
-                    <div class="radial_bar">
-                        <svg viewBox="0 0 200 200">
-                            <circle class="path" cx="100" cy="100" r="80"></circle>
-                            <circle class="progress_bar" cx="100" cy="100" r="80" style="--offset: 50"></circle>
-                        </svg>
-                        <div class="porcentage">90%</div>
-                        <div class="text">Teamwork</div>
-                    </div>
-                </div>
-            </div>
+    /* Propriétés CSS modernes */
+    backdrop-filter: blur(2px);
+    padding: 0.5rem 1rem;
+    max-width: 65ch; /* Largeur optimale pour la lecture */
+}
 
-    </section>
-    <section id="Contact" class="contant">
-        <div class="main-text">
-            <span class="animate-on-scroll">Ask me question</span>
-            <h2 class="animate-on-scroll">Contact Me</h2>
-        </div>
-        <form action="#" class="animate-on-scroll">
-            <input type="text" placeholder="Your Name">
-            <input type="text" placeholder="Your Email">
-            <input type="text" placeholder="Your Adress">
-            <input type="number" placeholder="Phone Number">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <div class="btn-form">
-                <button type="submit" class="button2">Send Message</button>
-            </div>
 
-        </form>
-    </section>
-    <footer>
-        <p>Copyright &copy; 2025 by Baradi imane || All Right reserved.</p>
-        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-    </footer>
-    <script src="index_js.js"></script>
+/* Media queries pour l'adaptabilité */
+@media (max-width: 768px) {
+    .home_content p {
+        font-size: 1.3rem;
+        margin: 1.2rem 0;
+        animation: fadeInLeft 0.8s ease-out forwards;
+    }
+}
+.home-souscnt a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    text-decoration: none;
+    color:rgb(255, 196, 0) ;
+    border: 0.3rem solid rgb(255, 196, 0);
+    border-radius: 50%;
+    font-size: 2rem;
+    margin: 3rem 1.5rem 3rem 0;
+    animation: slideInLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
 
-</body>
-</html>
+.home-souscnt a:hover{
+    background:rgb(255, 196, 0) ;
+    color: aliceblue;
+    box-shadow: 0 0 1.5rem rgb(255, 196, 0);
+}
+.button{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background:rgb(255, 196, 0) ;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem rgb(255, 196, 0);
+    font-size: 1.5rem;
+    color: white;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s ease;
+}
+.button:hover{
+    color: rgb(255, 196, 0);
+    background-color: rgb(2, 2, 41);
+}
+/* Animations améliorées avec effets de rebond et timing précis */
+@keyframes slideInRight {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    80% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    80% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInUp {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(-20px);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInDown {
+    0% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(20px);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Classes d'animation réutilisables avec paramètres optimisés */
+  .animate-right {
+    animation: slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  
+  .animate-left {
+    animation: slideInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  
+  .animate-top {
+    animation: slideInUp 0.7s cubic-bezier(0.18, 0.89, 0.32, 1.28) both;
+  }
+  
+  .animate-bottom {
+    animation: slideInDown 0.7s cubic-bezier(0.18, 0.89, 0.32, 1.28) both;
+  }
+  
+  .animate-delay-1 { animation-delay: 0.2s; }
+  .animate-delay-2 { animation-delay: 0.4s; }
+  .animate-delay-3 { animation-delay: 0.6s; }
+
+/*.container{
+    background: rgba(247, 247, 247, 0.9);
+}*/
+.about{
+
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    background:url(background.jpeg) no-repeat ;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.about_img img{
+    width: 35vw;
+    border: solid;
+    border-radius: 50%;
+    background: transparent;
+    border: none;
+    animation: top 1s ease forwards;
+}
+.me{
+    color: rgb(5, 236, 236);
+}
+.title{
+    text-align: center;
+    font-size: 4rem;
+}
+.about_cont h2{
+    text-align: left;
+    line-height: 1.4;
+}
+.about_cont p{
+    font-size: 1.8rem;
+    margin: 3rem 0 3rem;
+}
+.button2{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background:rgb(5, 236, 236) ;
+    border-radius: 4rem;
+    box-shadow: 0 0 0.5rem rgb(5, 236, 236);
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s ease;
+}
+.button2:hover{
+    color: rgb(5, 236, 236);
+    background-color: rgb(8, 7, 7);
+
+
+}
+.read-more-btn {
+    transition: all 0.3s ease;
+}
+.read-more-btn:hover {
+    transform: translateY(-2px);
+}
+.skills{
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    background:url(background.jpeg) no-repeat ;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+}
+.skill_title{
+    margin-bottom: 6rem;
+}
+.skill_title h2{
+    text-align: center;
+    font-size: 4rem;
+    color:rgb(255, 196, 0) ;
+}
+.skills_container h3{
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color:rgb(238, 237, 234) ;
+}
+.skills_container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 4rem 0 0;
+    grid-row-gap: 3rem;
+    grid-column-gap: 5rem;
+
+}
+.skill_bar{
+    margin-bottom: 2rem;
+}
+.skills_left .skill_bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+.skills_left .skill_bar .bar{
+    width: 100%;
+    height: 1rem;
+    background-color: rgb(82, 97, 92);
+    border-radius: 2.5rem;
+    margin-top: 1rem;
+    position: relative;
+}
+.skill_bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: rgb(255, 196, 0);
+    border-radius: 2.5rem;
+    box-shadow:  0 0 1.5rem rgb(255, 196, 0);
+}
+.skill_bar .bar .html{
+    width: 80%;
+    animation: html 1s;
+}
+.skill_bar .bar .css{
+    width: 70%;
+    animation: css 2s;
+}
+.skill_bar .bar .javascript{
+    width: 50%;
+    animation: javascript 3s;
+}
+.skill_bar .bar .python{
+    width: 60%;
+    animation: python 4s;
+}
+.skill_bar .bar .java{
+    width: 40%;
+    animation: java 5s;
+}
+.skill_bar .bar .c{
+    width: 70%;
+    animation: c 6s;
+}
+.skill_bar .bar .cp{
+    width: 40%;
+    animation: cp 7s;
+}
+.skill_bar .bar .sql{
+    width: 60%;
+    animation: sql 8s;
+}
+
+@keyframes html {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+@keyframes css {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes javascript {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+@keyframes python {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+@keyframes java {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 40%;
+    }
+}
+@keyframes c {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes cp {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 40%;
+    }
+}
+@keyframes sql {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+
+.radial_bars {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.radial_bars .radial_bar {
+    width: 100%;
+    height: 17rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.radial_bars .radial_bar svg {
+    width: 18rem;
+    height: 18rem;
+    transform: rotate(-90deg);
+}
+
+.radial_bars .radial_bar .progress_bar {
+    stroke-width: 12;
+    stroke: rgb(255, 196, 0);
+    filter: drop-shadow(0px 0px 5px rgba(255, 196, 0, 0.5));
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate_bar 1s linear forwards;
+}
+
+@keyframes animate_bar 
+{
+    100% {
+        stroke-dashoffset: var(--offset); 
+    }
+}
+.path {
+    stroke-width: 12;
+    stroke: rgb(67, 75, 75);
+    fill: transparent;
+}
+
+.porcentage, .text {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.porcentage {
+    top: 50%;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.text {
+    top: 60%;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+
+
+.contant form{
+    text-align: center;
+    max-width: 80rem;
+    margin: 1rem auto;
+    margin-bottom: 5rem;
+}
+.contant form input,.contant form textarea{
+    width: 100%;
+    color: rgb(235, 225, 225);
+    background: rgb(67, 75, 75);
+    margin-bottom: .8rem;
+    border: none;
+    border-radius: 5px;
+    padding: .9rem;
+}
+.contant form textarea{
+    resize: none;
+}
+.main-text {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.main-text span{
+    font-size: 2rem;
+    color: beige;
+}
+.main-text h2{
+    font-size: 3.5rem;
+    color: rgb(5, 236, 236);
+}
+footer{
+    background-color: rgb(67, 75, 75);
+    padding: 1.5rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer p{
+    color: aliceblue;
+}
+footer a{
+    display: inline-flex;
+    justify-content: center;
+    padding: .6rem;
+    border-radius: 5px;
+    color: antiquewhite;
+    background-color: rgb(5, 236, 236);
+}
+footer a i{
+    font-size: 1rem;
+}
+
+
+::-webkit-scrollbar{
+    height: 0;
+    width: .7rem;
+}
+::-webkit-scrollbar-track{
+    background: rgb(55, 55, 70);
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(243, 243, 241);
+    border-radius: 5rem;
+}
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px); 
+    transition: opacity 1s ease-out, transform 1.2s cubic-bezier(0.22, 1, 0.36, 1); 
+  }
+  
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    .bar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  

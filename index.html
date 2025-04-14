@@ -9,49 +9,199 @@
 
 </head>
 <body>
+
     <header class="head">
         <a href="#" class="logo"><span class="slogo">P</span>ort<span class="slogo">f</span>olio</a>
         <nav class="bar">
-            <a href="#" style="--i:1" class="active">Home</a>
-            <a href="#" style="--i:2">About</a>
-            <a href="#" style="--i:3">Skills</a>
-            <a href="#" style="--i:4">Contact</a>
+            <a href="#home" style="--i:1">Home</a><!--class="active"-->
+            <a href="#about" style="--i:2">About</a>
+            <a href="#skills" style="--i:3">Skills</a>
+            <a href="#Contact" style="--i:4">Contact</a>
         </nav>
     </header>
-    <section class="home">
+    <section class="home" id="home">
         <div class="home_content">
-            <h3>Hello,It's Me</h3>
-            <h1><span class="name">Baradi Imane</span></h1>
-            <h3>And I'm a</h3>
-            <p>developper studiant in ensa 3trd year</p>
+            <h3 class="animate-on-scroll">Hello,It's Me</h3>
+            <h1 class="animate-on-scroll"><span class="name">Baradi Imane</span></h1>
+            <h3 class="animate-on-scroll">And I'm a Full-stack developper</h3>
+            <p class="animate-on-scroll">Currently in my third year at the National School of Applied Sciences in Agadir, I'm specializing in Software and Application Development. I'm passionate about creating efficient, user-friendly digital experiences, and I'm always eager to learn and grow as a full-stack developer.
+        </p>
             <div class="home-souscnt">
-                <a href="#" style="--i:5"><i class='bx bxl-facebook-circle'></i></a>
-                <a href="#" style="--i:6"><i class='bx bxl-instagram-alt' ></i></a>
-                <a href="#" style="--i:7"><i class='bx bxl-whatsapp-square' ></i></a>
-                <a href="#" style="--i:8"><i class='bx bxl-linkedin-square' ></i></a>
-                <a href="#" style="--i:9"><i class='bx bxl-gmail' ></i></a>
+                <a href="https://web.facebook.com/imi.baradi/" target="_blank" style="--i:5"><i class='bx bxl-facebook-circle' class="animate-on-scroll"></i></a>
+                <a href="https://www.instagram.com/imane_baradi/" target="_blank" style="--i:6"><i class='bx bxl-instagram-alt' class="animate-on-scroll" ></i></a>
+                <a href="https://www.linkedin.com/in/imane-baradi-897784335/" target="_blank" style="--i:8"><i class='bx bxl-linkedin-square' class="animate-on-scroll"></i></a>
+                <a href="mailto:imaneb772@gmail.com" style="--i:9"><i class='bx bxl-gmail' class="animate-on-scroll"></i></a>
             </div>
-            <a href="#" class="button">Dowloand cv</a>
+            <a href="BARADI (1).pdf" download class="button" target="_blank" class="animate-on-scroll">Download CV</a>
         </div>
         <div class="photo">
-            <img src="img_icon.jpg" alt="">
+            <img src="img_icon.jpg" alt="" class="animate-on-scroll">
         </div>
         
     </section>
-    <section class="about">
+    <section class="about" id="about">
         
-            <div class="about_img">
-                <img src="img.jpg" alt="">
+            <div class="about_img" class="animate-on-scroll">
+                <img src="img.jpg" alt="" >
             </div>
     
             <div class="about_cont">
-                <h2>About <span>Me</span></h2>
-                <p>I am a third-year student at the National School of Applied Sciences in Agadir, specializing in software and application development. My core values include perseverance, curiosity, and a commitment to continuous learning. My goal is to contribute to innovative and impactful projects while developing my technical skills—particularly in web development, user interface design, and programming—as well as my soft skills, such as teamwork, communication, and project management.</p>
+                <h2 class="title" class="animate-on-scroll">About <span class="me">Me</span></h2>
+                <p class="animate-on-scroll">
+                    I am a passionate first-year Software and Application Development Engineering student at the National School of Applied Sciences (ENSA) in Agadir. With a strong foundation in programming, algorithms, and system design, I am eager to explore the dynamic world of software engineering. My curiosity drives me to continuously learn new technologies, while my problem-solving mindset pushes me to tackle challenges creatively.  
+                </p>
+                
+                <p class="hidden-content" style="display: none;" class="animate-on-scroll">
+                    Third-year Software Engineering student specializing in application development with proven skills in Java, Python, and web technologies. Developed multiple academic projects including interactive websites and CLI applications, utilizing modern tools like Git and Docker. Trilingual problem-solver with a scientific mindset (Baccalaureate with Highest Honors) and passion for tech innovation. Currently enhancing my expertise in React and system design while actively participating in hackathons to sharpen my real-world development skills.
+                </p>
+                <div>
+                    <button class="button2 read-more-btn" class="animate-on-scroll">Read more</button>
+                </div>
             </div>
-      
-        
         
     </section>
+    <section class="skills " id="skills">
+        <div class="skill_title">
+            <h2 class="animate-on-scroll">My skills</h2>
+        </div>
+        <div class="skills_container">
+            <div class="skills_left">
+                <h3 class="animate-on-scroll">Technical Skills</h3>
+                <div class="skill_bar" >
+                    <div class="info">
+                        <p>HTML</p>
+                        <p>80%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="html"></span>
+                    </div>
+                </div>
+                <div class="skill_bar">
+                    <div class="info">
+                        <p>CSS</p>
+                        <p>70%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="css"></span>
+                    </div>
+                </div>
+                <div class="skill_bar">
+                    <div class="info">
+                        <p>JavaScript</p>
+                        <p>50%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="javascript"></span>
+                    </div>
+                </div>
+                <div class="skill_bar">
+                    <div class="info">
+                        <p>Python</p>
+                        <p>60%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="python"></span>
+                    </div>
+                </div>
+                <div class="skill_bar">
+                    <div class="skill_bar">
+                        <div class="info">
+                            <p>JAVA</p>
+                            <p>40%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="java"></span>
+                        </div>
+                    </div>
+                    <div class="skill_bar">
+                        <div class="info">
+                            <p>C</p>
+                            <p>70%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="c"></span>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <p>C++</p>
+                        <p>40%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="cp"></span>
+                    </div>
+                </div>
+                <div class="skill_bar">
+                    <div class="info">
+                        <p>SQL</p>
+                        <p>60%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="sql"></span>
+                    </div>         
+               </div>
+               
+            </div>
+            <div class="skills_right">
+                <h3 class="animate-on-scroll">Professional Skills</h3>
+                <div class="radial_bars">
+                    <div class="radial_bar" >
+                        <svg viewBox="0 0 200 200">
+                            <circle class="path" cx="100" cy="100" r="80" ></circle>
+                            <circle class="progress_bar" cx="100" cy="100" r="80" style="--offset: 50"></circle>
+                        </svg>
+                        <div class="porcentage">90%</div>
+                        <div class="text">Creativity</div>
+                    </div>
+                    <div class="radial_bar">
+                        <svg viewBox="0 0 200 200">
+                            <circle class="path" cx="100" cy="100" r="80"></circle>
+                            <circle class="progress_bar" cx="100" cy="100" r="80" style="--offset: 200"></circle>
+                        </svg>
+                        <div class="porcentage">60%</div>
+                        <div class="text">Communication</div>
+                    </div>
+                    <div class="radial_bar">
+                        <svg viewBox="0 0 200 200">
+                            <circle class="path" cx="100" cy="100" r="80"></circle>
+                            <circle class="progress_bar" cx="100" cy="100" r="80" style="--offset: 125"></circle>
+                        </svg>
+                        <div class="porcentage">75%</div>
+                        <div class="text">Problem Solving</div>
+                    </div>
+                    <div class="radial_bar">
+                        <svg viewBox="0 0 200 200">
+                            <circle class="path" cx="100" cy="100" r="80"></circle>
+                            <circle class="progress_bar" cx="100" cy="100" r="80" style="--offset: 50"></circle>
+                        </svg>
+                        <div class="porcentage">90%</div>
+                        <div class="text">Teamwork</div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <section id="Contact" class="contant">
+        <div class="main-text">
+            <span class="animate-on-scroll">Ask me question</span>
+            <h2 class="animate-on-scroll">Contact Me</h2>
+        </div>
+        <form action="#" class="animate-on-scroll">
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Your Email">
+            <input type="text" placeholder="Your Adress">
+            <input type="number" placeholder="Phone Number">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <div class="btn-form">
+                <button type="submit" class="button2">Send Message</button>
+            </div>
+
+        </form>
+    </section>
+    <footer>
+        <p>Copyright &copy; 2025 by Baradi imane || All Right reserved.</p>
+        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+    </footer>
     <script src="index_js.js"></script>
+
 </body>
 </html>
